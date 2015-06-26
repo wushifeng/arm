@@ -1,10 +1,10 @@
 #include"main.h"
 
-void DisplayLCD(WINDOW *win, int iCurrentPageIdx, bool bFPMatch)
+void DisplayLCD(WINDOW *win, int iCurrentPageIdx)
 {
     //DEBUG_LOG("DisplayLCD(int iOpt);");
 
-    Ncurses_DisplayPage(win,iCurrentPageIdx, bFPMatch);
+    Ncurses_DisplayPage(win,iCurrentPageIdx);
 }
 
 void PlayRecord()

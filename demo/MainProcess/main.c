@@ -52,7 +52,9 @@ int main()
         iInputEventIdx = WaitForInputEvent();
 
         
-        
+        // 判断是否完成指纹验证，
+        // 若完成，可浏览报警页面，
+        // 否则只能浏览状态和IP地址页面
         if(bFPMatch)
         {
             iStatusPageMax = STATUS_PAGE_MAX;
@@ -61,6 +63,7 @@ int main()
         {
             iStatusPageMax = STATUS_PAGE_MAX - 1;
         }
+
         switch(iInputEventIdx)
         {
             case INPUT_EVENT_KEY_UP:
@@ -69,7 +72,7 @@ int main()
                     {
                         iCurrentPageIdx = (iCurrentPageIdx + iStatusPageMax - 1) % iStatusPageMax;
                     }
-                    DisplayLCD(win, iCurrentPageIdx, bFPMatch);
+                    DisplayLCD(win, iCurrentPageIdx);
                     break;
             case INPUT_EVENT_KEY_DOWN:
                     // 显示下一页
@@ -87,11 +90,14 @@ int main()
             case INPUT_EVENT_FP:
                     // 处理录入指纹之后的操作，主要流程
                     FP_Process(win, &bFPMatch);
-		    if(bFPMatch){
-			DEBUG_LOG("指纹 == true");
-		    }else{
-			DEBUG_LOG("指纹 == false");
-		    }
+        		    if(bFPMatch)
+                    {
+        			    DEBUG_LOG("指纹 == true");
+        		    }
+                    else
+                    {
+        			    DEBUG_LOG("指纹 == false");
+        		    }
                     break;
             case INPUT_EVENT_NONE:
                     // 显示首页

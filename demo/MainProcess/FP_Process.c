@@ -8,11 +8,14 @@ void FP_Process(WINDOW *win, bool *bFPMatch)
     bool bValidateApprovalTime;
     int  iUserOperationStatus;
     int  iInputEventIdx;
-    bFPMatchResult = FP_Match(bFPMatch);
-
+    char* pUserID = NULL;
+    bFPMatchResult = FP_Match(bFPMatch, &pUserID);
     // 如果匹配成功
     if(bFPMatchResult)
     {
+        // 测试指纹仪匹配的用户ID
+        DEBUG_LOG(pUserID);
+
         // 将指纹输入错误次数清零
         FP_ErrorClear();
         
@@ -36,12 +39,9 @@ void FP_Process(WINDOW *win, bool *bFPMatch)
                         
                         // LCD显示:  开柜成功
                         DisplayChineseLCD(win,"开柜成功");
-                        
-        				//写入操作日志
-        				DB_LogWrite(LOG_TYPE_BUSINESS, "开柜成功开柜成功");
 
                         // 开柜
-                        Door_Open();
+                        Door_Open(win, pUserID);
                     }
 
                     // 如果失效
@@ -85,7 +85,7 @@ void FP_Process(WINDOW *win, bool *bFPMatch)
                         case INPUT_EVENT_KEY_UP:
                                 // 选择开柜功能
                                 DEBUG_LOG("选择开柜功能");
-                                Door_Process(win);
+                                Door_Process(win, pUserID);
                                 break;
                         case INPUT_EVENT_KEY_DOWN:
                                 // 选择审计功能

@@ -22,9 +22,10 @@
 #define INPUT_EVENT_KEY_BACK      3   // 按返回键
 #define INPUT_EVENT_FP            4   // 指纹录入
 
-#define DB_TABLE_NAME_CONFIG          "ywsetting" // 业务设置表
-#define CONFIG_NAME_APPROVAL_MODEL    "zxsp" // 监管模式
-#define CONFIG_NAME_FP_MODEL          "yzms"
+#define DB_TABLE_NAME_USER 				"user" // 业务设置表
+#define DB_TABLE_NAME_CONFIG          	"ywsetting" // 业务设置表
+#define CONFIG_NAME_APPROVAL_MODEL    	"zxsp" // 监管模式
+#define CONFIG_NAME_FP_MODEL          	"yzms"
 
 #define CONFIG_FP_MODEL_ONE     "1"
 #define CONFIG_FP_MODEL_TWO     "2"
@@ -48,3 +49,8 @@
 #define LOG_TABLE_BUSINESS          "ywlog"
 #define LOG_TABLE_ALARM             "bjlog"
 #define LOG_TABLE_MANAGER           "gllog"
+
+#define LOG_ACTION_TYPE_OPEN_DOOR 	"开柜"
+
+#define LOG_RESULT_TYPE_SUCCESS		"成功"
+#define LOG_RESULT_TYPE_FAILED		"失败"

@@ -16,7 +16,8 @@ C_SRCS += \
 ../Wait_Operation.c \
 ../main.c \
 ../sqlite3.c \
-./Cam_Operation.c
+../Cam_Operation.c \
+../Log_Operation.c
 
 OBJS += \
 ./DB_Operation.o \
@@ -31,7 +32,8 @@ OBJS += \
 ./Wait_Operation.o \
 ./main.o \
 ./sqlite3.o \
-./Cam_Operation.o
+./Cam_Operation.o \
+./Log_Operation.o
 
 C_DEPS += \
 ./DB_Operation.d \
@@ -46,7 +48,8 @@ C_DEPS += \
 ./Wait_Operation.d \
 ./main.d \
 ./sqlite3.d \
-./Cam_Operation.d
+./Cam_Operation.d \
+./Log_Operation.d
 
 
 # Each subdirectory must supply rules for building sources it contributes

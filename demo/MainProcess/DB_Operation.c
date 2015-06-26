@@ -20,7 +20,7 @@ bool DB_CheckApprovalAvailable()
 void DB_LogWrite(int type, char* content)
 {
 
-    //insert into gllog(content) values('ÍõXXÂŒÈëÐÂÓÃ»§');
+    //insert into gllog(content) values('');
     char* sql = 0;
     char* insert = "insert into ";
     char* table ;
@@ -85,6 +85,38 @@ int DB_GetConfigInfo(char* config, char** result)
     *result = (char*)malloc(sizeof(data));
 	memset(*result,0,sizeof(data));
 	strcpy(*result, data);
+    
+    //DEBUG_LOG(result);
+    
+    free(sql);
+    return ret;
+}
+
+int DB_GetUserNameByUserID(char* pUserID, char** result)
+{
+    int ret = 0;
+    char* data = "";
+    int i,j,nrow, ncolumn,index;
+
+    // 生成sql语句
+    char *sql = NULL;
+    char *table = DB_TABLE_NAME_USER;
+    int len = sizeof("select name") + sizeof(" from ") + sizeof(table) + sizeof(" where id='") + sizeof(pUserID) + sizeof("'")+6;
+    sql = (char*)malloc(len*sizeof(char));
+    memset(sql, 0, sizeof(sql));
+    strcat(sql,"select name");
+    strcat(sql," from ");
+    strcat(sql,table);
+    strcat(sql," where id='");
+    strcat(sql,pUserID);
+    strcat(sql,"'");
+    strcat(sql,"\0");
+    //DEBUG_LOG(sql);
+    Sqlite_QueryOne(sql, &data, &nrow, &ncolumn);
+    //getch();
+    *result = (char*)malloc(sizeof(data));
+    memset(*result,0,sizeof(data));
+    strcpy(*result, data);
     
     //DEBUG_LOG(result);
     

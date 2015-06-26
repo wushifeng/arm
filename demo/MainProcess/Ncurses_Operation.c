@@ -1,7 +1,7 @@
 #include "main.h"
 #include<string.h>
 
-void Ncurses_DisplayPage(WINDOW *local_win,int page_num, bool bFPMatch)
+void Ncurses_DisplayPage(WINDOW *local_win,int page_num)
 {
 	Ncurses_ClearWindow(local_win);
 	switch(page_num){

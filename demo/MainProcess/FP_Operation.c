@@ -1,14 +1,21 @@
 #include "main.h"
 extern int iFPErrCount;
-bool FP_Match(bool* bFPMatch)
+bool FP_Match(bool* bFPMatch, char** retUserID)
 {
     bool ret = true;
+    char *ID = "admin";
+    int len = 0;
 
     char ch = getch();
     if(ch == 'y')
     {
         ret = true;
         DEBUG_LOG("FP_Match true");
+
+        len = sizeof(ID) + 20;
+        *retUserID = (char*) malloc(len);
+        memset(*retUserID, 0, len);
+        strcpy(*retUserID, ID);
     }
     else
     {

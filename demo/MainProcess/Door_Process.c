@@ -1,7 +1,7 @@
 #include"main.h"
 #include<stdbool.h>
 
-void Door_Process(WINDOW* win)
+void Door_Process(WINDOW* win, char* pUserID)
 {
     char* pFPModel="";
     // 首先获取配置信息  指纹模式
@@ -9,7 +9,7 @@ void Door_Process(WINDOW* win)
     if(strcmp(pFPModel,CONFIG_FP_MODEL_ONE) == 0)
     {
             DEBUG_LOG("FPModel == 单指纹模式  ");
-            OneFPModelProcess(win);
+            OneFPModelProcess(win, pUserID);
     }
     else if(strcmp(pFPModel,CONFIG_FP_MODEL_TWO) == 0)
     {
@@ -31,7 +31,7 @@ void Door_Process(WINDOW* win)
     }
 }
 
-void OneFPModelProcess(WINDOW* win)
+void OneFPModelProcess(WINDOW* win, char* pUserID)
 {
     char* pApprovalModel = "";
     int iInputEventIdx;
@@ -76,7 +76,7 @@ void OneFPModelProcess(WINDOW* win)
 
         
         // 直接开柜
-        Door_Open(win);
+        Door_Open(win, pUserID);
     }
 }
 
