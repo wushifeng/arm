@@ -619,7 +619,10 @@ int pzInit(int argc, char *argv[])
     }
 
     if (init_videoIn(videoIn, (char *) videodevice, width, height, fps, format, grabmethod, avifilename) < 0)
-        exit(1);
+    {
+        //exit(1);
+        return -1;
+    }
     /* if we're supposed to list the controls, do that now */
     if ( querycontrols )
         enum_controls(videoIn->fd);

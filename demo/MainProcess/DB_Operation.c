@@ -21,12 +21,12 @@ void DB_LogWrite(int type, char* content)
 {
 
     //insert into gllog(content) values('');
-    char* sql = 0;
-    char* insert = "insert into ";
+    //char* sql = 0;
+    //char* insert = "insert into ";
     char* table ;
-    char* values = "(content) values('";
-    char* end = "');";
-    int len = 0;
+    //char* values = "(content) values('";
+    //char* end = "');";
+    //int len = 0;
     
     switch(type)
     {
@@ -41,20 +41,22 @@ void DB_LogWrite(int type, char* content)
             table = NULL;
             break;
     }
-    len = sizeof(insert) + sizeof(table) + sizeof(values) + sizeof(content) + sizeof(end) + 120;
-    sql = (char*)malloc(len*sizeof(char));
-    memset(sql, 0, sizeof(sql));
-    strcat(sql, insert);
-    strcat(sql, table);
-    strcat(sql, values);
-    strcat(sql, content);
-    strcat(sql, end);
-    DEBUG_LOG("sql == ");
-    DEBUG_LOG(sql);
-    Sqlite_InsertOne(sql);
+    //len = sizeof(insert) + sizeof(table) + sizeof(values) + sizeof(content) + sizeof(end) + 120;
+    //sql = (char*)malloc(len*sizeof(char));
+    //memset(sql, 0, sizeof(sql));
+    //strcat(sql, insert);
+    //strcat(sql, table);
+    //strcat(sql, values);
+    //strcat(sql, content);
+    //strcat(sql, end);
+    //DEBUG_LOG("sql == ");
+    //DEBUG_LOG(sql);
+    //Sqlite_InsertOne(sql);
 
     DEBUG_LOG("write log");
-    free(sql);
+    //free(sql);
+
+    Sqlite_InsertLog(table, content);
 }
 
 void DB_GetUserPermission()

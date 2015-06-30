@@ -7,6 +7,10 @@ WINDOW *debug_win;
 
 // 指纹验证错误总数
 int iFPErrCount;
+
+// 摄像头是否开启
+bool bCamOpen;
+
 int mainA()
 {
 /*

@@ -67,3 +67,33 @@ int Sqlite_InsertOne(char* sql)
 
 	return 1;
 }
+
+int Sqlite_InsertLog(char* table, char* content)
+{
+	char sql[80]="";
+	sqlite3* db = 0;
+	sqlite3_stmt * stmt;  
+	sprintf(sql, "insert into %s(content) values(?)", table);
+    int ret = 0;
+    ret = sqlite3_open(DB_FILE_PATH,&db);
+	if(SQLITE_OK != ret)  
+    {  
+        return -1; 
+    }  
+
+    ret = sqlite3_prepare_v2(db, sql, -1, &stmt, NULL);  
+    if(SQLITE_OK != ret)  
+    {  
+        sqlite3_finalize(stmt); 
+        return -1; 
+    }  
+	sqlite3_bind_text( stmt, 1, content, -1, SQLITE_STATIC ); 
+	ret = sqlite3_step( stmt );  
+	if (( ret != SQLITE_DONE )&&( ret != SQLITE_ROW )) 
+	{
+		return -1;  
+	}
+
+	sqlite3_finalize( stmt );  
+	sqlite3_close(db);	
+}

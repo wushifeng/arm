@@ -10,7 +10,7 @@ void Door_Open(WINDOW* win, char* pUserID)
     Log_GenerateYW(pUserID, LOG_ACTION_TYPE_OPEN_DOOR, LOG_RESULT_TYPE_SUCCESS, &pLogContent);
     
     //写入操作日志־
-    DB_LogWrite(LOG_TYPE_BUSINESS, "开门成功");
+    DB_LogWrite(LOG_TYPE_BUSINESS, pLogContent);
 	
     Cam_CatchPicture();
 }
