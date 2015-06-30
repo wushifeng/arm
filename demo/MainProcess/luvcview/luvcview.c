@@ -600,7 +600,7 @@ int pzInit(int argc, char *argv[])
 #endif
 
     if (videodevice == NULL || *videodevice == 0) {
-        videodevice = "/dev/video0";
+        videodevice = "/dev/video1";
     }
 
     if (avifilename == NULL || *avifilename == 0) {

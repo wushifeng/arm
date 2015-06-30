@@ -1,7 +1,6 @@
-摄像头初始化
-Controlinital();
 KEY_RIGHT         
 FP_Match true
+admin
 iFPErrCount clear
 USER_OPERATION_STATUS_NONE
 KEY_UP            
@@ -13,136 +12,13 @@ sql ==
 insert into ywlog(content) values('开门成功');
 write log
 抓拍图像
-P-06:26:2015-13:57:30.jpg
+P-06:26:2015-17:54:28.jpg
 指纹 == true
 摄像头初始化
 Controlinital();
 KEY_RIGHT         
 FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_UP            
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_UP            
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-摄像头初始化
-Controlinital();
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-摄像头初始化
-Controlinital();
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-摄像头初始化
-抓拍图像
-P-06:26:2015-15:04:06.jpg
-摄像头关闭
-摄像头初始化
-抓拍图像
-P-06:26:2015-15:04:21.jpg
-摄像头关闭
-摄像头初始化
-抓拍图像
-P-06:26:2015-15:04:34.jpg
-摄像头关闭
-摄像头初始化
-抓拍图像
-P-06:26:2015-15:04:41.jpg
-摄像头关闭
-摄像头初始化
-Controlinital();
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_LEFT          
-摄像头初始化
-Controlinital();
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_LEFT          
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 双指纹模式  
-指纹 == true
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 单指纹模式  
-远程审批模式 == on
-指纹 == true
-KEY_RIGHT         
-FP_Match false
-指纹 == false
-KEY_RIGHT         
-FP_Match true
+admin
 iFPErrCount clear
 USER_OPERATION_STATUS_NONE
 KEY_UP            
@@ -150,16 +26,19 @@ KEY_UP
 FPModel == 单指纹模式  
 远程审批模式 == off
 开门成功     
+pUserName == 
+admin
 sql == 
 insert into ywlog(content) values('开门成功');
 write log
 抓拍图像
-P-06:26:2015-15:13:37.jpg
+P-06:26:2015-18:00:45.jpg
 指纹 == true
 摄像头初始化
 Controlinital();
 KEY_RIGHT         
 FP_Match true
+admin
 iFPErrCount clear
 USER_OPERATION_STATUS_NONE
 KEY_UP            
@@ -167,78 +46,13 @@ KEY_UP
 FPModel == 单指纹模式  
 远程审批模式 == off
 开门成功     
+pUserName == 
+admin
+YWLOG = 
+admin开柜成功
 sql == 
 insert into ywlog(content) values('开门成功');
 write log
 抓拍图像
-P-06:26:2015-15:23:57.jpg
-指纹 == true
-摄像头初始化
-Controlinital();
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_UP            
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_DOWN          
-KEY_UP            
-KEY_DOWN          
-KEY_UP            
-KEY_DOWN          
-KEY_RIGHT         
-FP_Match false
-指纹 == false
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_DOWN          
-KEY_LEFT          
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_LEFT          
-指纹 == true
-KEY_DOWN          
-KEY_DOWN          
-KEY_DOWN          
-KEY_UP            
-KEY_UP            
-KEY_RIGHT         
-FP_Match true
-iFPErrCount clear
-USER_OPERATION_STATUS_NONE
-KEY_UP            
-选择开柜功能
-FPModel == 单指纹模式  
-远程审批模式 == off
-开门成功     
-sql == 
-insert into ywlog(content) values('开门成功');
-write log
-抓拍图像
-P-06:26:2015-15:28:22.jpg
+P-06:26:2015-18:02:22.jpg
 指纹 == true
