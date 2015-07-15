@@ -397,8 +397,8 @@ int pzInit(int argc, char *argv[])
     int format = V4L2_PIX_FMT_MJPEG;
     int i;
     int grabmethod = 1;
-    int width = 320;
-    int height = 240;
+    int width = 160;
+    int height = 120;
     int fps = 15;
     char *avifilename = NULL;
     int queryformats = 0;
@@ -600,7 +600,7 @@ int pzInit(int argc, char *argv[])
 #endif
 
     if (videodevice == NULL || *videodevice == 0) {
-        videodevice = "/dev/video1";
+        videodevice = "/dev/video0";
     }
 
     if (avifilename == NULL || *avifilename == 0) {
@@ -687,10 +687,12 @@ int pzInit(int argc, char *argv[])
 
 
     pRGBData = (unsigned char *)malloc(videoIn->width*videoIn->width*4*sizeof(char));
-    if(pRGBData==NULL)
-    {
-        return ;
-	}
+ //    if(pRGBData==NULL)
+ //    {
+ //        return ;
+	// }
+    
+    return 0; 
 }
 /*
 void luvcview(int argc, char *argv[], int num)

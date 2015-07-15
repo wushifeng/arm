@@ -21,9 +21,22 @@ int mainA()
 	getch();
 	Ncurses_CloseWindow();
 */
-Cam_Init();
-Cam_CatchPicture();
-Cam_Close();
+//Cam_Init();
+//Cam_CatchPicture();
+//Cam_Close();
+//
+    // char* result = NULL;
+    // if(DB_GetUserIDByFPID(8,&result))
+    //     printf("%s\n",result);
+    // else printf("NULL");
+    // unsigned char a = 0b0000;
+    // printf("%d\n", a&PERMISSION_LOGIN);
+    // DB_GetUserPermission("admin",&a);
+    // printf("%d\n", a);
+
+    // DB_OpenLoginPermission("admin");
+    
+    DB_CloseLoginPermission("admin");
 }
 int main()
 {
@@ -93,7 +106,7 @@ int main()
                     break;
             case INPUT_EVENT_FP:
                     // 处理录入指纹之后的操作，主要流程
-                    FP_Process(win, &bFPMatch);
+                    FP_Pro(win, &bFPMatch);
         		    if(bFPMatch)
                     {
         			    DEBUG_LOG("指纹 == true");
@@ -125,6 +138,9 @@ void Controlinital(WINDOW **win)
     // cam init
 	Cam_Init();
 
+    // FP init
+    FP_Init();
+
     DEBUG_INIT();
     DEBUG_LOG("Controlinital();");
 }
@@ -145,8 +161,8 @@ void DEBUG_LOG(char* pLog)
     }
     
     */
-	mvwprintw(debug_win,1,1,pLog);
-    wrefresh(debug_win);
+	//mvwprintw(debug_win,1,1,pLog);
+    //wrefresh(debug_win);
     LOG(pLog);
     //getch();
 }

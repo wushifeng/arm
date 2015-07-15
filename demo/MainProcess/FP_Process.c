@@ -2,14 +2,16 @@
 #include<stdbool.h>
 
 
-void FP_Process(WINDOW *win, bool *bFPMatch)
+void FP_Pro(WINDOW *win, bool *bFPMatch)
 {
+    char* log[80];
     bool bFPMatchResult;
     bool bValidateApprovalTime;
     int  iUserOperationStatus;
     int  iInputEventIdx;
     char* pUserID = NULL;
-    bFPMatchResult = FP_Match(bFPMatch, &pUserID);
+    unsigned char cUserPermission = 0B0000;
+    bFPMatchResult = FP_Match_OP(bFPMatch, &pUserID);
     // 如果匹配成功
     if(bFPMatchResult)
     {
@@ -75,7 +77,7 @@ void FP_Process(WINDOW *win, bool *bFPMatch)
                     DisplayChineseLCD(win,"功能选择");
                     
                     // 获取用户权限
-                    DB_GetUserPermission();
+                    DB_GetUserPermission(pUserID, &cUserPermission);
 
                     // 等待输入事件
                     iInputEventIdx = WaitForInputEvent();
@@ -90,6 +92,24 @@ void FP_Process(WINDOW *win, bool *bFPMatch)
                         case INPUT_EVENT_KEY_DOWN:
                                 // 选择审计功能
                                 //DisplayChineseLCD(win,"choice shenji");
+                                
+                                memset(log,0,sizeof(log));
+                                sprintf(log,"%s选择开柜功能",pUserID);
+                                DEBUG_LOG(log);
+                                // 没有审计权限
+                                if( !(cUserPermission&PERMISSION_LOGIN) )
+                                {
+                                    memset(log,0,sizeof(log));
+                                    sprintf(log,"%s没有审计权限",pUserID);
+                                    DEBUG_LOG(log);
+                                    break;
+                                }
+
+                                // 有审计权限，打开网页登陆权限，N分钟后关闭
+                                memset(log,0,sizeof(log));
+                                sprintf(log,"%s打开网页登陆权限",pUserID);
+                                DEBUG_LOG(log);
+                                DB_OpenLoginPermission(pUserID);
                                 break;
                         case INPUT_EVENT_KEY_BACK:
                                 // 返回状态首页

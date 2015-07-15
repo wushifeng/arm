@@ -1,0 +1,576 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"b",
+				"background"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"PERMISSION_ID",
+				"PERMISSION_OPEN_ID	(main.h)"
+			],
+			[
+				"pu",
+				"pUserPermission"
+			],
+			[
+				"PERMIS",
+				"PERMISSION_LOGIN	(main.h)"
+			],
+			[
+				"onmo",
+				"onmouseout	Attr"
+			],
+			[
+				"fun",
+				"fun	Function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/Answer/Sites/widget/html/frame1.html",
+			"settings":
+			{
+				"buffer_size": 3585,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Answer/Sites/widget/html/user/user.html",
+			"settings":
+			{
+				"buffer_size": 2465,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"last_filter": "gistat",
+		"selected_items":
+		[
+			[
+				"gistat",
+				"Git: Status"
+			],
+			[
+				"branch",
+				"Legit: Branches"
+			],
+			[
+				"gitchece",
+				"Git: Checkout New Branch"
+			],
+			[
+				"gitstatus",
+				"Git: Status"
+			],
+			[
+				"gitlog",
+				"Git: Log"
+			],
+			[
+				"mp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"gitdiff",
+				"Git: Diff"
+			],
+			[
+				"gstus",
+				"Git: Status"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"gitstat",
+				"Git: Status"
+			],
+			[
+				"sjas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"snippetfu",
+				"Snippet: Function"
+			],
+			[
+				"gitstatu",
+				"Git: Status"
+			],
+			[
+				"gitadd",
+				"Git: Add Current File"
+			],
+			[
+				"giin",
+				"Git: Init"
+			],
+			[
+				"gitin",
+				"Git: Init"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"giinit",
+				"Git: Init"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"packains",
+				"Package Control: Install Package"
+			],
+			[
+				"PackageC",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control:ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control:in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package C",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Answer/Sites/widget",
+		"/Users/Answer/Sites/widget/html",
+		"/Users/Answer/Sites/widget/html/user",
+		"/Users/Answer/Sites/widget/image"
+	],
+	"file_history":
+	[
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/Log.txt",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/FP_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/FP_Process.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/finchos.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/Finchos_V3.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/main.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Cam_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/luvcview/luvcview.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Sqlite_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/DB_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/main.h",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/sqlite3.h",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Log_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/Process_blh3001.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/Process_fsc1001B.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/Process_fsc2001.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/Finchos_V3.h",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Finchos/fp_port.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/Finchos/subdir.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/FP_Process.d",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/objects.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/sources.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/subdir.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/makefile",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/MyFing/Debug/subdir.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Debug/luvcview/subdir.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/MyFing/Debug/makefile",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/MyFing/Debug/Finchos/subdir.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/MyFing/Debug/sources.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/MyFing/Debug/objects.mk",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/Door_Operation.c",
+		"/Users/Answer/Development/GitHub/arm/demo/MainProcess/luvcview/v4l2uvc.c",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Controller/SMSController.class.php",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Controller/IndexController.class.php",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Common/Utils/Ucpaas.class.php",
+		"/Users/Answer/Development/Sublime Projects/untitled.sublime-project",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Controller/PushController.class.php",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Model/a.php",
+		"/Users/Answer/Sites/thinkphp/Application/Home/Model/Push.class.php",
+		"/Users/Answer/Downloads/ModulesDevProject_v1.1.14/APICloudSDK/assets/widget/html/main-con.html",
+		"/Users/Answer/Downloads/ModulesDevProject_v1.1.14/APICloudSDK/src/com/apicloud/moduleDemo/APIModuleDemo.java",
+		"/Users/Answer/Downloads/ModulesDevProject_v1.1.14/APICloudSDK/assets/widget/index.html",
+		"/Users/Answer/Downloads/ModulesDevProject_v1.1.14/APICloudSDK/project.properties",
+		"/Users/Answer/百度云同步盘/工作/小鲂工作室/项目/汽车管理/1.需求.txt",
+		"/Users/Answer/百度云同步盘/工作/小鲂工作室/项目/汽车管理/2.1.问题.txt",
+		"/Users/Answer/百度云同步盘/工作/小鲂工作室/项目/汽车管理/3.初步功能模块划分与功能梳理.txt",
+		"/Users/Answer/百度云同步盘/工作/小鲂工作室/项目/汽车管理/4.详细需求说明整理",
+		"/Users/Answer/Downloads/process(1).cpp",
+		"/Users/Answer/Downloads/一键刷回原生系统-工厂镜像【Nexus设备通用】/一键刷回原生系统-工厂镜像【Nexus设备通用】.bat",
+		"/Users/Answer/Downloads/Samples/APICloudDemo/index.html",
+		"/Users/Answer/Downloads/process.cpp",
+		"/Users/Answer/Desktop/temp.c",
+		"/Users/Answer/百度云同步盘/工作/小鲂工作室/项目/汽车管理/问题",
+		"/Users/Answer/Development/GitHub/Nanohttpd/nanohttpd/README.md",
+		"/Users/Answer/Development/GitHub/Nanohttpd/nanohttpd/core/src/main/java/fi/iki/elonen/NanoHTTPD.java",
+		"/Users/Answer/Development/GitHub/FDLGame/README.md",
+		"/Users/Answer/Development/GitHub/FDLGame/FDLGameAndroid/app/src/main/java/answer/fdlgameandroid/MainActivity.java",
+		"/Applications/Android Studio.app/Contents/bin/idea.properties",
+		"/Users/Answer/Desktop/bootstrap-3.3.4-dist/a.html",
+		"/Users/Answer/Downloads/flip/index.html",
+		"/Users/Answer/Development/www/FDLGame/Home/game.html",
+		"/Users/Answer/Development/www/FDLGame/Home/vote.html",
+		"/Users/Answer/Development/www/FDLGame/Home/result.html",
+		"/Users/Answer/Development/www/FDLGame/Home/room.html",
+		"/Users/Answer/Development/www/FDLGame/Home/src/vote.html",
+		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-xampp.conf",
+		"/Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf",
+		"/Applications/XAMPP/xamppfiles/etc/httpd.conf",
+		"/Users/Answer/Development/学习积累/xampp 增加局域网iP访问功能方法：",
+		"/Users/Answer/Downloads/激活教程地址.rtfd",
+		"/Users/Answer/Development/环境软件/bootstrap-3.3.4-dist/a.html",
+		"/Users/Answer/Development/www/FDLGame/Home/test.java",
+		"/Users/Answer/Development/www/FDLGame/Home/upload.html",
+		"/Users/Answer/Development/www/FDLGame/Home/index.php",
+		"/Users/Answer/Development/www/FDLGame/Test/helloworld.html",
+		"/Users/Answer/Development/学习积累/Sublime快捷键",
+		"/Users/Answer/Development/www/FDLGame/Test/helloworld.js",
+		"/Users/Answer/Development/www/FDLGame/Admin/index.php",
+		"/Users/Answer/Development/环境软件/Sencha Touch-2.4.1/sencha-touch-debug.js",
+		"/Users/Answer/Development/www/FDLGame/README.md",
+		"/Users/Answer/Downloads/goagent-3.0/local/proxy.ini",
+		"/Users/Answer/Desktop/jqcool.net-bootstrapvalidator/demo/index.html",
+		"/Users/Answer/Desktop/ubuntu12.04-Thinkphp3.2.3-lighttpd-sqlite3.txt",
+		"/Users/Answer/Development/www/FDLGame/index.php",
+		"/Users/Answer/Development/www/index.php",
+		"/Applications/XAMPP/xamppfiles/etc/httpd.conf.bak",
+		"/Applications/XAMPP/xamppfiles/docs/NOTEMPTY",
+		"/Applications/XAMPP/xamppfiles/apache2/conf/httpd.conf"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"40px",
+			"-->\n",
+			"fbp",
+			"videoin->framebuffer",
+			"320",
+			"video0",
+			"rgbd",
+			"luvcview(",
+			"PERMISSION_OPEN",
+			"PERMISSION__CONTENT",
+			"PERMISSION_NETWORK_SETTING_CONTENT",
+			"PERMISSION__CONTENT",
+			"DB_GetUserNameByUserID",
+			"sqlite3_column_",
+			"]\n",
+			"Response",
+			"fff",
+			"background",
+			"padding",
+			"   ",
+			"oObj",
+			"13",
+			"toBack",
+			"vhos",
+			"vhost",
+			"htdocs",
+			"xampp",
+			"ip",
+			"allow ",
+			"allow",
+			"deny",
+			"port",
+			"127",
+			"bordered",
+			"td",
+			"}",
+			"});",
+			"9:",
+			"8:",
+			"7:",
+			"6:",
+			"5:",
+			"4:",
+			"3:",
+			"2:",
+			": ",
+			":",
+			"2:",
+			"sencha",
+			"d",
+			"D",
+			"d",
+			"D",
+			"dd",
+			"ffdds",
+			"ifmodule alias",
+			"user ",
+			"user",
+			"documents",
+			"root",
+			"virtual",
+			"virtual host",
+			"<virtual host",
+			"virtual host",
+			"<Directory",
+			"Directory",
+			"User Daemon",
+			"Virtual host",
+			"locationM",
+			"localhost",
+			"Application",
+			"12",
+			"allow from",
+			"Document"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/Answer/Sites/widget/html/frame1.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3056,
+								3060
+							],
+							[
+								3281,
+								3285
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1312.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Answer/Sites/widget/html/user/user.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2465,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1561,
+								1561
+							]
+						],
+						"settings":
+						{
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 60.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-checkout":
+	{
+		"height": 100.0
+	},
+	"output.git-commit":
+	{
+		"height": 100.0
+	},
+	"output.git-init":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "Sites.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mainactivity.java",
+				"FDLGameAndroid/app/src/main/java/answer/fdlgameandroid/MainActivity.java"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 226.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -5,10 +5,11 @@ void Cam_Init()
 	if(pzInit(0,NULL)<0)
 	{
 		bCamOpen = false;
+		DEBUG_LOG("摄像头初始化失败");
 		return;
 	}
 	bCamOpen = true;
-	DEBUG_LOG("摄像头初始化");
+	DEBUG_LOG("摄像头初始化成功");
 }
 
 void Cam_Close()

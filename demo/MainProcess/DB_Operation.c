@@ -59,8 +59,20 @@ void DB_LogWrite(int type, char* content)
     Sqlite_InsertLog(table, content);
 }
 
-void DB_GetUserPermission()
+void DB_GetUserPermission(char* pUserID, unsigned char* pUserPermission)
 {
+    // select user_role.userid,role_permission.permissionid from user_role left join role_permission on user_role.roleid=role_permission.roleid where user_role.userid='admin'
+    
+
+    int ret ;
+    ret = Sqlite_QueryPermissionByUserID(pUserID, pUserPermission);
+    if( ret == -1 )
+    {
+        DEBUG_LOG("数据库打开错误");
+        return false;
+    }
+
+    return true;
 }
 
 int DB_GetConfigInfo(char* config, char** result)
@@ -125,3 +137,58 @@ int DB_GetUserNameByUserID(char* pUserID, char** result)
     free(sql);
     return ret;
 }
+
+bool DB_GetUserIDByFPID(int fpID, char** result)
+{
+    int ret ;
+    char* userid = NULL;
+    ret = Sqlite_QueryUserIDByFPID(fpID, &userid);
+    if( ret == -1 )
+    {
+        DEBUG_LOG("数据库打开错误");
+        return false;
+    }
+    else if( ret == 0){
+        DEBUG_LOG("该指纹没有对应的用户");
+        *result = NULL;
+        return false;
+    }
+    *result = (char*)malloc(sizeof(userid));
+    memset(*result,0,sizeof(userid));
+    strcpy(*result,userid);
+
+    return true;
+}
+
+bool DB_OpenLoginPermission(char* pUserID)
+{
+    int ret;
+    ret = Sqlite_InsertLoginPermission(pUserID);
+    if( ret == -1 )
+    {
+        DEBUG_LOG("数据库打开错误");
+        return false;
+    }
+
+    return true;
+}
+
+bool DB_CloseLoginPermission(char* pUserID)
+{
+    int ret;
+    ret = Sqlite_DeleteLoginPermission(pUserID);
+    if( ret == -1 )
+    {
+        DEBUG_LOG("数据库打开错误");
+        return false;
+    }
+
+    return true;
+}
+
+
+
+
+
+
+
