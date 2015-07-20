@@ -24,8 +24,9 @@
 
 #define DB_TABLE_NAME_USER 				"user" // 业务设置表
 #define DB_TABLE_NAME_CONFIG          	"ywsetting" // 业务设置表
-#define CONFIG_NAME_APPROVAL_MODEL    	"zxsp" // 监管模式
-#define CONFIG_NAME_FP_MODEL          	"yzms"
+#define CONFIG_NAME_APPROVAL_MODEL    	"zxsp" // 中心审批
+#define CONFIG_NAME_FP_MODEL          	"yzms" // 指纹验证模式
+#define CONFIG_NAME_SUPERVISE_MODEL		"jgms" // 监管开柜模式
 
 #define CONFIG_FP_MODEL_ONE     "1"
 #define CONFIG_FP_MODEL_TWO     "2"
@@ -33,6 +34,9 @@
 
 #define CONFIG_APPROVAL_MODEL_ON    "on"
 #define CONFIG_APPROVAL_MODEL_OFF   "off"
+
+#define CONFIG_SUPERVISE_MODEL_ON    "on"
+#define CONFIG_SUPERVISE_MODEL_OFF   "off"
 
 
 #define USER_OPERATION_STATUS_NONE  1   // 用户操作状态为无
@@ -55,8 +59,10 @@
 #define LOG_RESULT_TYPE_SUCCESS		"成功"
 #define LOG_RESULT_TYPE_FAILED		"失败"
 
+#define PERMISSION_NULL				0b0000
 #define PERMISSION_OPEN       		0B0001
 #define PERMISSION_LOGIN			0B0010
+#define PERMISSION_SUPERVISE_OPEN 	0B0100
 
 /* 数据库中权限ID */
 #define PERMISSION_OPEN_ID							"kg"
@@ -71,3 +77,6 @@
 #define PERMISSION_BUSINESS_LOG_AUDIT_ID			"ywrzsj"
 #define PERMISSION_SECURITY_OFFICER_LOG_AUDIT_ID	"aqbmyrzsj"
 #define PERMISSION_SYSTEM_ADMIN_LOG_AUDIT_ID		"ywrzsj"
+
+
+#define MALLOC_ERR	exit(1)

@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include luvcview/subdir.mk
 -include Finchos/subdir.mk
+-include v4l2bmp/subdir.mk
 -include subdir.mk
 -include objects.mk
 

@@ -32,5 +32,24 @@ void Cam_CatchPicture()
 	if(pic_name)
 	{
 		free(pic_name);
+		pic_name=NULL;
 	}
+}
+
+void Cam_CatchPicture_BMP()
+{
+	// if(!bCamOpen)
+	// {
+	// 	return;
+	// }
+	// char* pic_name = NULL;
+	// pz(&pic_name);
+	// DEBUG_LOG("抓拍图像");
+	// DEBUG_LOG(pic_name);
+
+	// if(pic_name)
+	// {
+	// 	free(pic_name);
+	// }
+	pz_bmp();
 }

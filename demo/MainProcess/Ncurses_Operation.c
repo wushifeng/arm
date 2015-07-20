@@ -28,13 +28,25 @@ void Ncurses_DisplayPage(WINDOW *local_win,int page_num)
 }
 
 
-void Ncurses_DisplayChinese(WINDOW *local_win,char* str)
+void Ncurses_DisplayChinese(WINDOW *local_win,char* str, int lineId)
 {
 	Ncurses_ClearWindow(local_win);
-	mvwprintw(local_win,1,1,"                ");
-	mvwprintw(local_win,2,1,"%s",str);
+	mvwprintw(local_win,1,1,"      注意      ");
+	mvwprintw(local_win,lineId,1,"%s",str);
 	mvwprintw(local_win,3,1,"                ");
-	mvwprintw(local_win,4,1,"       2        ");
+	mvwprintw(local_win,4,1,"                ");
+			
+	wrefresh(local_win);	
+}
+
+void Ncurses_DisplayMore(WINDOW *local_win, char* str1, char* str2, char* str3, char* str4)
+{
+	char *null_str = "";
+	Ncurses_ClearWindow(local_win);
+	mvwprintw(local_win,1,1,"%s",str1 == NULL ? null_str : str1);
+	mvwprintw(local_win,2,1,"%s",str2 == NULL ? null_str : str2);
+	mvwprintw(local_win,3,1,"%s",str3 == NULL ? null_str : str3);
+	mvwprintw(local_win,4,1,"%s",str4 == NULL ? null_str : str4);
 			
 	wrefresh(local_win);	
 }

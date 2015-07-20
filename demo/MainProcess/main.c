@@ -136,12 +136,16 @@ void Controlinital(WINDOW **win)
     *win = Ncurses_CreateWindow();
 
     // cam init
-	Cam_Init();
+	// Cam_Init();
+
+
+    DEBUG_INIT();
+
 
     // FP init
     FP_Init();
 
-    DEBUG_INIT();
+    
     DEBUG_LOG("Controlinital();");
 }
 
@@ -161,8 +165,8 @@ void DEBUG_LOG(char* pLog)
     }
     
     */
-	//mvwprintw(debug_win,1,1,pLog);
-    //wrefresh(debug_win);
+	mvwprintw(debug_win,1,1,pLog);
+    wrefresh(debug_win);
     LOG(pLog);
     //getch();
 }

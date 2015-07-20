@@ -15,4 +15,6 @@ EXECUTABLES :=
 SUBDIRS := \
 . \
 luvcview \
+Finchos \
+v4l2bmp \
 

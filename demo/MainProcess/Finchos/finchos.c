@@ -195,15 +195,32 @@ void PowerOff(void) {
  **************************************************************/
 int USART1_Config(void) {
 	//printf("Start...\n");
-	fd = open(UART_DEVICE, O_RDWR | O_NONBLOCK);
-	if (fd < 0) {
-		perror(UART_DEVICE);
-		sleep(1);
-		//exit(1);
-		DEBUG_LOG("FP open fail");
-		return -1;
+	int count = 10;
+	int i = 0;
+	char log[80];
+	while(1)
+	{
+		i++;
+		fd = open(UART_DEVICE, O_RDWR | O_NONBLOCK);
+		if (fd < 0) {
+			//perror(UART_DEVICE);
+			//exit(1);
+			memset(log, 0, sizeof(log));
+			sprintf(log, "第%d次打开指纹仪失败", i);
+			DEBUG_LOG(log);
+			//if(i>=count)
+			//{
+				return -1;
+			//}
+			//else
+			//{
+			//	sleep(1);
+			//	continue;
+			//}
+		}
+		break;
 	}
-
+	
 	DEBUG_LOG("FP open success");
 	//printf("Open...\n");
 	set_speed(fd, 115200);

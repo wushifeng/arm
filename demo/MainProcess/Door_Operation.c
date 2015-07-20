@@ -12,5 +12,6 @@ void Door_Open(WINDOW* win, char* pUserID)
     //写入操作日志־
     DB_LogWrite(LOG_TYPE_BUSINESS, pLogContent);
 	
-    Cam_CatchPicture();
+    // Cam_CatchPicture();
+    Cam_CatchPicture_BMP();
 }

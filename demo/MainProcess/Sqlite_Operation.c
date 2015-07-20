@@ -28,6 +28,11 @@ int Sqlite_QueryOne(char* sql, char** result, int* pNrow, int *pNcolumn)
 		if(pNrow>0)
 		{
             *result = (char*)malloc(sizeof(data[1]));
+			if(!*result)
+			{
+				DEBUG_LOG("Not Enough Memory For result in Sqlite_QueryOne");
+				goto malloc_err;
+			}
 		    memset(*result,0,sizeof(data[1]));
             strcpy(*result, data[1]);
 		}
@@ -43,6 +48,9 @@ int Sqlite_QueryOne(char* sql, char** result, int* pNrow, int *pNcolumn)
 	
 
 	return 1;
+
+malloc_err:
+	MALLOC_ERR;
 }
 
 int Sqlite_InsertOne(char* sql)
@@ -182,7 +190,7 @@ int Sqlite_QueryPermissionByUserID(char* pUserID, unsigned char* pUserPermission
 
 			}
 			else if(strcmp(rowData, PERMISSION_SUPERVISE_OPEN_ID) == 0){
-
+				*pUserPermission|= PERMISSION_SUPERVISE_OPEN;
 			}
 			else if(strcmp(rowData, PERMISSION_PARAMS_SETTING_ID) == 0){
 				*pUserPermission|= PERMISSION_LOGIN;

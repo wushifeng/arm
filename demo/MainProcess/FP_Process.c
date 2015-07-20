@@ -10,13 +10,15 @@ void FP_Pro(WINDOW *win, bool *bFPMatch)
     int  iUserOperationStatus;
     int  iInputEventIdx;
     char* pUserID = NULL;
-    unsigned char cUserPermission = 0B0000;
+    unsigned char cUserPermission = PERMISSION_NULL;
     bFPMatchResult = FP_Match_OP(bFPMatch, &pUserID);
     // 如果匹配成功
     if(bFPMatchResult)
     {
         // 测试指纹仪匹配的用户ID
-        DEBUG_LOG(pUserID);
+        memset(log,0,sizeof(log));
+        sprintf(log,"第一个指纹用户为%s",pUserID);
+        DEBUG_LOG(log);
 
         // 将指纹输入错误次数清零
         FP_ErrorClear();
@@ -87,7 +89,18 @@ void FP_Pro(WINDOW *win, bool *bFPMatch)
                         case INPUT_EVENT_KEY_UP:
                                 // 选择开柜功能
                                 DEBUG_LOG("选择开柜功能");
-                                Door_Process(win, pUserID);
+
+                                // 没有开柜权限
+                                if( !(cUserPermission & PERMISSION_OPEN) )
+                                {
+                                    memset(log,0,sizeof(log));
+                                    sprintf(log,"%s没有开柜权限",pUserID);
+                                    DEBUG_LOG(log);
+                                    break;
+                                }
+
+                                // 有开柜权限
+                                Door_Process(win, pUserID, cUserPermission);
                                 break;
                         case INPUT_EVENT_KEY_DOWN:
                                 // 选择审计功能
@@ -97,7 +110,7 @@ void FP_Pro(WINDOW *win, bool *bFPMatch)
                                 sprintf(log,"%s选择开柜功能",pUserID);
                                 DEBUG_LOG(log);
                                 // 没有审计权限
-                                if( !(cUserPermission&PERMISSION_LOGIN) )
+                                if( !(cUserPermission & PERMISSION_LOGIN) )
                                 {
                                     memset(log,0,sizeof(log));
                                     sprintf(log,"%s没有审计权限",pUserID);

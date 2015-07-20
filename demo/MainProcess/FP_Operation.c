@@ -16,15 +16,20 @@ void FP_Init()
     DEBUG_LOG("指纹仪打开成功！");
 }
 
+void FP_Close()
+{
+    Finchos_Close();
+}
 
 bool FP_Match_OP(bool* bFPMatch, char** retUserID)
 {
+    sleep(2);
     char log[20];
     bool ret = true;
     char *ID = NULL;
     int len = 0;
     int fpID ;
-    
+
     fpID = VerifyUser(); // fpID = 22;
     sprintf(log,"FP ID = %d",fpID);
     DEBUG_LOG(log);
@@ -33,7 +38,7 @@ bool FP_Match_OP(bool* bFPMatch, char** retUserID)
     if( fpID < 0 )
     {
         ret = false;
-        DEBUG_LOG("FP_Match false");
+        DEBUG_LOG("指纹匹配失败");
     }
     else
     {
@@ -49,6 +54,11 @@ bool FP_Match_OP(bool* bFPMatch, char** retUserID)
 
             len = sizeof(ID) + 20;
             *retUserID = (char*) malloc(len);
+            if(!*retUserID)
+            {
+                DEBUG_LOG("Not Enough Memory For *retUserID in Log_GenerateYW");
+                goto malloc_err;
+            }
             memset(*retUserID, 0, len);
             strcpy(*retUserID, ID);
         }
@@ -56,14 +66,17 @@ bool FP_Match_OP(bool* bFPMatch, char** retUserID)
         else
         {
             ret = false;
-            DEBUG_LOG("FP_Match false");
+            DEBUG_LOG("指纹匹配失败");
         }
         
     }
     
-    
-    *bFPMatch = ret;
+    if(bFPMatch!=NULL)
+        *bFPMatch = ret;
     return ret;
+
+malloc_err:
+    MALLOC_ERR;
 }
 
 void FP_ErrorClear()
@@ -78,7 +91,7 @@ void FP_ErrorAlarm(WINDOW* win)
     if(iFPErrCount <= 3)
     {
         PlayRecord("FPMatch Error");
-        DisplayChineseLCD(win, "FPMatch Error");
+        DisplayMoreLCD(win, "   注意   ","  验证失败 ", "请再次验证","     ");
     }
     else
     {

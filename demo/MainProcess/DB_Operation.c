@@ -86,6 +86,12 @@ int DB_GetConfigInfo(char* config, char** result)
     char *table = DB_TABLE_NAME_CONFIG;
     int len = sizeof("select ")+sizeof(config)+sizeof(" from ")+sizeof(table)+sizeof(" where id=`set`")+6;
     sql = (char*)malloc(len*sizeof(char));
+    if(!sql)
+    {
+
+        DEBUG_LOG("Not Enough Memory For sql in DB_GetConfigInfo");
+        goto malloc_err;
+    }
     memset(sql, 0, sizeof(sql));
     strcat(sql,"select ");
     strcat(sql,config);
@@ -97,13 +103,22 @@ int DB_GetConfigInfo(char* config, char** result)
     Sqlite_QueryOne(sql, &data, &nrow, &ncolumn);
     //getch();
     *result = (char*)malloc(sizeof(data));
+    if(!*result)
+    {
+        DEBUG_LOG("Not Enough Memory For *result in DB_GetConfigInfo");
+        goto malloc_err;
+    }
 	memset(*result,0,sizeof(data));
 	strcpy(*result, data);
     
     //DEBUG_LOG(result);
     
     free(sql);
+    sql = NULL;
     return ret;
+
+malloc_err:
+    MALLOC_ERR;
 }
 
 int DB_GetUserNameByUserID(char* pUserID, char** result)
@@ -117,6 +132,11 @@ int DB_GetUserNameByUserID(char* pUserID, char** result)
     char *table = DB_TABLE_NAME_USER;
     int len = sizeof("select name") + sizeof(" from ") + sizeof(table) + sizeof(" where id='") + sizeof(pUserID) + sizeof("'")+6;
     sql = (char*)malloc(len*sizeof(char));
+    if(!sql)
+    {
+        DEBUG_LOG("Not Enough Memory For sql in DB_GetUserNameByUserID");
+        goto malloc_err;
+    }
     memset(sql, 0, sizeof(sql));
     strcat(sql,"select name");
     strcat(sql," from ");
@@ -129,13 +149,22 @@ int DB_GetUserNameByUserID(char* pUserID, char** result)
     Sqlite_QueryOne(sql, &data, &nrow, &ncolumn);
     //getch();
     *result = (char*)malloc(sizeof(data));
+    if(!*result)
+    {
+        DEBUG_LOG("Not Enough Memory For *result in DB_GetUserNameByUserID");
+        goto malloc_err;
+    }
     memset(*result,0,sizeof(data));
     strcpy(*result, data);
     
     //DEBUG_LOG(result);
     
     free(sql);
+    sql = NULL;
     return ret;
+
+malloc_err:
+    MALLOC_ERR;
 }
 
 bool DB_GetUserIDByFPID(int fpID, char** result)
@@ -153,11 +182,19 @@ bool DB_GetUserIDByFPID(int fpID, char** result)
         *result = NULL;
         return false;
     }
-    *result = (char*)malloc(sizeof(userid));
+    *result = (char*)malloc(sizeof(userid));    
+    if(!*result)
+    {
+        DEBUG_LOG("Not Enough Memory For *result in DB_GetUserIDByFPID");
+        goto malloc_err;
+    }
     memset(*result,0,sizeof(userid));
     strcpy(*result,userid);
 
     return true;
+    
+malloc_err:
+    MALLOC_ERR;
 }
 
 bool DB_OpenLoginPermission(char* pUserID)
@@ -185,7 +222,6 @@ bool DB_CloseLoginPermission(char* pUserID)
 
     return true;
 }
-
 
 
 
