@@ -1,0 +1,5 @@
+第1次打开指纹仪失败
+指纹仪打开失败！
+Controlinital();
+KEY_RIGHT         
+验证指纹

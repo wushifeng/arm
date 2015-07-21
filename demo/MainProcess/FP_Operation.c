@@ -85,17 +85,19 @@ void FP_ErrorClear()
     DEBUG_LOG("iFPErrCount clear");
 }
 
-void FP_ErrorAlarm(WINDOW* win)
+int FP_ErrorAlarm(WINDOW* win)
 {
     iFPErrCount ++;
     if(iFPErrCount <= 3)
     {
         PlayRecord("FPMatch Error");
         DisplayMoreLCD(win, "   注意   ","  验证失败 ", "请再次验证","     ");
+        return 0;
     }
     else
     {
         // 扬声器报警
         DEBUG_LOG("ALARM!!!!FPMatch Error Too Much Times!!!");
+        return -1;
     }
 }

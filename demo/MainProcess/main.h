@@ -80,3 +80,17 @@
 
 
 #define MALLOC_ERR	exit(1)
+#define FREE(a)				\
+do{							\
+	if(a!=NULL){			\
+		free(a);			\
+		a = NULL;			\
+	}						\
+}while(0)
+
+
+
+
+
+
+

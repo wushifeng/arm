@@ -113,8 +113,7 @@ int DB_GetConfigInfo(char* config, char** result)
     
     //DEBUG_LOG(result);
     
-    free(sql);
-    sql = NULL;
+    FREE(sql);
     return ret;
 
 malloc_err:
@@ -159,8 +158,7 @@ int DB_GetUserNameByUserID(char* pUserID, char** result)
     
     //DEBUG_LOG(result);
     
-    free(sql);
-    sql = NULL;
+    FREE(sql);
     return ret;
 
 malloc_err:
